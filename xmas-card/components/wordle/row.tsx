@@ -5,22 +5,24 @@ import { FaTimes } from 'react-icons/fa'
 
 export default function Row() {
     const [code, setCode] = useState('');
-    const [correct, setCorrect] = useState(false);
+    const [cellColor, setCellColor] = useState("gray");
 
     // Refs to control each digit input element
     const inputRefs = [
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
-        useRef(null),
+        useRef<any>(null),
+        useRef<any>(null),
+        useRef<any>(null),
+        useRef<any>(null),
+        useRef<any>(null),
+        useRef<any>(null),
     ];
 
     // Reset all inputs and clear state
     const resetCode = () => {
         inputRefs.forEach(ref => {
-            ref.current.value = '';
+            if(ref.current) {
+                ref.current.value = '';
+            }
         });
         inputRefs[0].current.focus();
         setCode('');
@@ -41,7 +43,7 @@ export default function Row() {
     }, [reset]); //eslint-disable-line*/
 
     // Handle input
-    function handleInput(e, index) {
+    function handleInput(e: any, index: number) {
         const input = e.target;
         const previousInput = inputRefs[index - 1];
         const nextInput = inputRefs[index + 1];
@@ -72,12 +74,12 @@ export default function Row() {
     }
 
     // Select the contents on focus
-    function handleFocus(e) {
+    function handleFocus(e: any) {
         e.target.select();
     }
 
     // Handle special keys
-    function handleKeyDown(e, index) {
+    function handleKeyDown(e: any, index: number) {
         const input = e.target;
         const previousInput = inputRefs[index - 1];
         const nextInput = inputRefs[index + 1];
@@ -90,12 +92,12 @@ export default function Row() {
             }
         } else if (e.keyCode === 13) {
             console.log('hit it!');
-            setCorrect(true);
+            setCellColor('green');
         }
     }
 
     // Capture pasted characters
-    const handlePaste = (e) => {
+    const handlePaste = (e: any) => {
         const pastedCode = e.clipboardData.getData('text');
         if (pastedCode.length === 6) {
             setCode(pastedCode);
@@ -121,7 +123,7 @@ export default function Row() {
         <div className="flex gap-2 relative my-2">
             {[0, 1, 2, 3, 4, 5].map((index) => (
                 <input
-                    className="text-2xl bg-gray-800 w-10 flex p-2 text-center"
+                    className={`text-2xl bg-${cellColor}-800 w-10 flex p-2 text-center`}
                     key={index}
                     type="text"
                     maxLength={1}
@@ -140,7 +142,6 @@ export default function Row() {
                     :
                     <></>
             }
-        <p>{correct.toString()}</p>
         </div>
     );
 }
