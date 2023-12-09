@@ -5,7 +5,6 @@ import { FaTimes } from 'react-icons/fa'
 
 export default function Row() {
     const [code, setCode] = useState('');
-    const [cellColor, setCellColor] = useState("gray");
 
     // Refs to control each digit input element
     const inputRefs = [
@@ -17,6 +16,11 @@ export default function Row() {
         useRef<any>(null),
     ];
 
+    const indices = [0, 1, 2, 3, 4, 5];
+    const cellColors = ['gray', 'gray', 'gray', 'gray', 'gray', 'gray'];
+    const [cells, setCells] = useState(cellColors);
+    const answer: string = 'SOPHIE';
+
     // Reset all inputs and clear state
     const resetCode = () => {
         inputRefs.forEach(ref => {
@@ -26,6 +30,7 @@ export default function Row() {
         });
         inputRefs[0].current.focus();
         setCode('');
+        setCells(['gray', 'gray', 'gray', 'gray', 'gray', 'gray']);
     }
 
 
@@ -91,8 +96,16 @@ export default function Row() {
                 previousInput.current.focus();
             }
         } else if (e.keyCode === 13) {
-            console.log('hit it!');
-            setCellColor('green');
+            for(let i=0; i<6; i++) {
+                if(answer.indexOf(inputRefs[i].current.value) <= -1){  // character NOT found in answer  
+                    cellColors[i] = "red";
+                } else if(answer.indexOf(inputRefs[i].current.value) > -1 && answer[i] !== inputRefs[i].current.value) { // letter is somewhere else in string
+                    cellColors[i] = "#DEB887";
+                } else {
+                    cellColors[i] = "green";
+                }
+            }
+            setCells(cellColors);
         }
     }
 
@@ -121,9 +134,9 @@ export default function Row() {
 
     return (
         <div className="flex gap-2 relative my-2">
-            {[0, 1, 2, 3, 4, 5].map((index) => (
+            {indices.map((index) => (
                 <input
-                    className={`text-2xl bg-${cellColor}-800 w-10 flex p-2 text-center`}
+                    className={`text-2xl w-10 flex p-2 text-center`}
                     key={index}
                     type="text"
                     maxLength={1}
@@ -133,6 +146,7 @@ export default function Row() {
                     onFocus={handleFocus}
                     onKeyDown={(e) => handleKeyDown(e, index)}
                     onPaste={handlePaste}
+                    style={{backgroundColor: cells[index]}}
                 />
             ))}
             {
