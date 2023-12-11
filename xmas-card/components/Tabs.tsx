@@ -6,8 +6,6 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Wordle from './wordle/wordle';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,13 +48,6 @@ export default function BasicTabs() {
     setValue(newValue);
   };
 
-  const handleDragStart = (e: any) => e.preventDefault();
-
-  const items = [
-    <img src="assets/one.JPEG" onDragStart={handleDragStart} role="presentation" />,
-    <img src="assets/two.JPEG" onDragStart={handleDragStart} role="presentation" />,
-    <img src="assets/three.JPEG" onDragStart={handleDragStart} role="presentation" />,
-  ];
 
   return (
     <div>
@@ -72,9 +63,6 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={0}>
         <div className='text-center'>
             <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Merry Christmas from the Martins! 🎅</h1>
-            <div style={{ width: '30%' }}>
-                <AliceCarousel mouseTracking items={items} autoPlay infinite autoHeight animationType='fadeout' autoPlayInterval={3000} />
-            </div>
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>

@@ -133,10 +133,10 @@ export default function Row() {
     }
 
     return (
-        <div className="flex gap-2 relative my-2">
+        <div className="flex gap-3 relative my-2">
             {indices.map((index) => (
                 <input
-                    className={`text-2xl w-10 flex p-2 text-center`}
+                    className={`text-4xl w-16 flex p-3 text-center h-20`}
                     key={index}
                     type="text"
                     maxLength={1}
