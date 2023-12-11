@@ -1,15 +1,10 @@
 import Image from 'next/image'
-import Row from '@/components/wordle/row'
+import Tabs from '../components/Tabs'
 
 export default function Home() {
   return (
     <div>
-  <Row/>
-  <Row/>
-  <Row/>
-  <Row/>
-  <Row/>
-  <Row/>
+      <Tabs/>
     </div>
   )
 }
