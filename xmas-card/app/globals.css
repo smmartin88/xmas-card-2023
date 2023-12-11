@@ -4,10 +4,12 @@
 
 @import "tailwindcss/utilities";
 
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 189, 189, 189;
+  --background-start-rgb: 189, 189, 189;
+  --background-end-rgb:189, 189, 189;
 }
 
 body {
