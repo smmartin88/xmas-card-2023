@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Wordle from './wordle/wordle';
+import PhotoGrid from './photo-grid';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -62,7 +63,10 @@ export default function BasicTabs() {
       </Box>
       <CustomTabPanel value={value} index={0}>
         <div className='text-center'>
-            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Merry Christmas from the Martins! 🎅</h1>
+            <h1 className="mb-4 text-4xl drop-shadow-[0_5px_5px_rgba(0,0,0,0.40)] font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Merry Christmas from the Martins! 🎅</h1>
+            <PhotoGrid/>
+            <div className="footer">
+            </div>
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
