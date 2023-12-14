@@ -71,3 +71,22 @@ body {
   color: white;
   text-align: center;
 }
+
+.memory-card {
+  background-color: rgb(180, 91, 91);
+  height: 150px; 
+  margin-top: 20px;
+  width: 150px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 175px 175px 175px 175px;
+  justify-content: center;
+}
+
+.css-ueukts-MuiButtonBase-root-MuiToggleButton-root.Mui-selected,
+.css-ueukts-MuiButtonBase-root-MuiToggleButton-root.Mui-selected:hover {
+  background-image: url(../public/assets/IMG_3668.jpeg);
+  background-size: 150px;
+}

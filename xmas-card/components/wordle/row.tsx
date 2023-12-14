@@ -3,8 +3,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa'
 
-export default function Row() {
+export default function Row(props: { isDisabled: boolean, i: number, setDisabled: (index: number) => void }) {
     const [code, setCode] = useState('');
+    const [rowDisabled, setRowDisabled] = useState(props.isDisabled);
 
     // Refs to control each digit input element
     const inputRefs = [
@@ -83,11 +84,16 @@ export default function Row() {
         e.target.select();
     }
 
+    function goToNextLine(index: number) {
+        props.setDisabled(index + 1);
+    }
+
     // Handle special keys
     function handleKeyDown(e: any, index: number) {
         const input = e.target;
         const previousInput = inputRefs[index - 1];
         const nextInput = inputRefs[index + 1];
+        var full = true;
 
         if ((e.keyCode === 8 || e.keyCode === 46) && input.value === '') {
             e.preventDefault();
@@ -96,16 +102,25 @@ export default function Row() {
                 previousInput.current.focus();
             }
         } else if (e.keyCode === 13) {
-            for(let i=0; i<6; i++) {
-                if(answer.indexOf(inputRefs[i].current.value) <= -1){  // character NOT found in answer  
-                    cellColors[i] = "red";
-                } else if(answer.indexOf(inputRefs[i].current.value) > -1 && answer[i] !== inputRefs[i].current.value) { // letter is somewhere else in string
-                    cellColors[i] = "#DEB887";
-                } else {
-                    cellColors[i] = "green";
+            for(var item of inputRefs) {
+                if (!item.current.value) {
+                    full = false;
                 }
             }
-            setCells(cellColors);
+            if (full) {
+                for(let i=0; i<6; i++) {
+                    if(answer.indexOf(inputRefs[i].current.value) <= -1){  // character NOT found in answer  
+                        cellColors[i] = "red";
+                    } else if(answer.indexOf(inputRefs[i].current.value) > -1 && answer[i] !== inputRefs[i].current.value) { // letter is somewhere else in string
+                        cellColors[i] = "#DEB887";
+                    } else {
+                        cellColors[i] = "green";
+                    }
+                }
+                setCells(cellColors);
+                setRowDisabled(true);
+                goToNextLine(props.i);
+            }
         }
     }
 
@@ -147,6 +162,7 @@ export default function Row() {
                     onKeyDown={(e) => handleKeyDown(e, index)}
                     onPaste={handlePaste}
                     style={{backgroundColor: cells[index]}}
+                    disabled={rowDisabled}
                 />
             ))}
             {
