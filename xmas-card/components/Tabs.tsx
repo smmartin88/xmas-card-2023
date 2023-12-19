@@ -53,15 +53,13 @@ export default function BasicTabs() {
 
   return (
     <div>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs TabIndicatorProps={{style: {background:'#710627'}}} value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label={<span style={{ color: '#710627' }}>Home</span>} {...a11yProps(0)} />
-          <Tab label={<span style={{ color: '#710627' }}>Wordle</span>} {...a11yProps(1)} />
-          <Tab label={<span style={{ color: '#710627' }}>Connections</span>} {...a11yProps(2)} />
-          <Tab label={<span style={{ color: '#710627' }}>Memory</span>} {...a11yProps(3)} />
-          <Tab label={<span style={{ color: '#710627' }}>About</span>} {...a11yProps(4)} />
-        </Tabs>
-      </Box>
+            <Tabs TabIndicatorProps={{style: {background:'#710627'}}} value={value} onChange={handleChange} aria-label="basic tabs example">
+                    <Tab label={<span style={{ color: '#710627' }}>Home</span>} {...a11yProps(0)} />
+                    <Tab label={<span style={{ color: '#710627' }}>Wordle</span>} {...a11yProps(1)} />
+                    <Tab label={<span style={{ color: '#710627' }}>Connections</span>} {...a11yProps(2)} />
+                    <Tab label={<span style={{ color: '#710627' }}>Memory</span>} {...a11yProps(3)} />
+                    <Tab label={<span style={{ color: '#710627' }}>About</span>} {...a11yProps(4)} />
+            </Tabs>
       <CustomTabPanel value={value} index={0}>
         <div className='text-center'>
             <h1 className="mb-4 text-4xl drop-shadow-[0_5px_5px_rgba(0,0,0,0.40)] font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Merry Christmas from the Martins! 🎅</h1>

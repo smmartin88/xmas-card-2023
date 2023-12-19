@@ -30,7 +30,7 @@ export default function PhotoGrid() {
             {images.map((image, index) => (
                 image.type ?
                 <div className="home-card">
-                    <p className='font-sans text-gray-400 text-3xl'>Welcome to our version of the NY Times Digital Games!</p>
+                    <div className='font-sans text-gray-400 text-3xl'>Welcome to our version of the NY Times Digital Games!</div>
                 </div>
                 :
                 <img
