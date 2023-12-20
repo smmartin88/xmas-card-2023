@@ -58,7 +58,6 @@ export default function BasicTabs() {
                     <Tab label={<span style={{ color: '#710627' }}>Wordle</span>} {...a11yProps(1)} />
                     <Tab label={<span style={{ color: '#710627' }}>Connections</span>} {...a11yProps(2)} />
                     <Tab label={<span style={{ color: '#710627' }}>Memory</span>} {...a11yProps(3)} />
-                    <Tab label={<span style={{ color: '#710627' }}>About</span>} {...a11yProps(4)} />
             </Tabs>
       <CustomTabPanel value={value} index={0}>
         <div className='text-center'>
@@ -78,9 +77,6 @@ export default function BasicTabs() {
         <div>
             <MemoryGame/>
         </div>
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={4}>
-        Item Five
       </CustomTabPanel>
     </div>
   );
