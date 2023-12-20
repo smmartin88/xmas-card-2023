@@ -32,7 +32,7 @@ const uniqueCardsArray = [
   },
   {
     type: "Sophie",
-    image: `assets/sophie-martini.jpg`
+    image: `assets/sophie-martini.jpeg`
   }
 ];
 
