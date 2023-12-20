@@ -200,6 +200,8 @@ export default function Wordle() {
         }
     }; */
 
+    // EITHER fix multiple letters in word about it is in correct place OR only
+    // have words that have no duplicated letters and add that to the rules
     return (
         <div className='flex flex-col items-center'>
             <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Wordle</h1>
