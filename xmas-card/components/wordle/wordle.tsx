@@ -183,8 +183,16 @@ export default function Wordle() {
                     }
                 }
                 setCellsMatrixx(currentColors, row);
-                setCurrentRowDisabled(row);
-                enableNextRow(row);
+                const word = inputRefs[row].map((val, idx) => {
+                    return val.current.value;
+                });
+                const wordStr = word.join('');
+                if (wordStr === answer) {
+                    setCurrentRowDisabled(row);
+                } else {
+                    setCurrentRowDisabled(row);
+                    enableNextRow(row);
+                }
             }
         }
     }
