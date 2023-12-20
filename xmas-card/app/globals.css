@@ -103,6 +103,32 @@ body {
   cursor: pointer;
   margin: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .card {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+    margin: 2px;
+  }
+
+  .memory-card {
+    background-color: rgb(180, 91, 91);
+    height: 80px; 
+    width: 80px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: center;
+  }
+}
   
   .card img {
     width: 100%;
