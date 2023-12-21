@@ -188,11 +188,6 @@ export default function Connections() {
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Connections!</h1>
         <div className="flex flex-row align-center mb-4 text-gray-700 lg:text-2xl">
           Create four groups of four!
-          <div className="restart-conn">
-            <Button style={{color: 'white'}} onClick={handleRestart}>
-                Restart
-            </Button>
-        </div>
         </div>
         <div className="flex sm:flex-row flex-col justify-evenly items-center" style={{width: '100%'}}>
             <div className="wrapper-connections">
