@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Wordle from './wordle/wordle';
 import PhotoGrid from './photo-grid';
 import MemoryGame from './memory';
+import Connections from './connections';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -71,7 +72,7 @@ export default function BasicTabs() {
         <Wordle/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+        <Connections/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
         <div>

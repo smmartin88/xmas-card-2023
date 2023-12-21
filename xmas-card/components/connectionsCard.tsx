@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import classnames from "classnames";
 
-const Card: FunctionComponent<CardProps> = ({ onClick, card, index, isInactive, isFlipped, isDisabled }) => {
+const ConnectionsCard: FunctionComponent<CardProps> = ({ onClick, card, index, isInactive, isFlipped, isDisabled }) => {
   const handleClick = () => {
     !isFlipped && !isDisabled && onClick(index);
   };
@@ -15,10 +15,10 @@ const Card: FunctionComponent<CardProps> = ({ onClick, card, index, isInactive, 
       onClick={handleClick}
     >
       <div className="card-face card-font-face">
-        <div className="memory-card"></div>
+        <div className="memory-card-2">{card.word}</div>
       </div>
-      <div className="card-face card-back-face">
-        <img src={card.image}/>
+      <div className="card-face-2 card-back-face">
+        <div>{card.word}</div>
       </div>
     </div>
   );
@@ -33,4 +33,4 @@ interface CardProps {
   isDisabled: any
 }
 
-export default Card;
+export default ConnectionsCard;
