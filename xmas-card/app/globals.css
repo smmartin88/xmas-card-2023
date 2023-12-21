@@ -104,12 +104,12 @@ body {
   margin: 10px;
 }
 
-.restart {
+.restart-conn {
   background-color: rgb(123, 56, 43);
   margin: 0 20px;
 }
 
-.restart:hover {
+.restart-conn:hover {
   background-color: rgb(180, 98, 82);
 }
 
@@ -171,6 +171,18 @@ body {
     background-color: rgb(82, 33, 33);
     text-align: center;
     padding: 60px 0;
+    &.card-back-face {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .card-face-memory {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
     &.card-back-face {
       transform: rotateY(180deg);
     }

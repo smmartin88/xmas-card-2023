@@ -14,10 +14,10 @@ const Card: FunctionComponent<CardProps> = ({ onClick, card, index, isInactive, 
       })}
       onClick={handleClick}
     >
-      <div className="card-face card-font-face">
+      <div className="card-face-memory card-font-face">
         <div className="memory-card"></div>
       </div>
-      <div className="card-face card-back-face">
+      <div className="card-face-memory card-back-face">
         <img src={card.image}/>
       </div>
     </div>
