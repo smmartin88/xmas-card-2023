@@ -8,7 +8,7 @@ const ConnectionsCard: FunctionComponent<CardProps> = ({ onClick, card, index, i
 
   return (
     <div
-      className={classnames("card", {
+      className={classnames("card-connections", {
         "is-flipped": isFlipped,
         "is-inactive": isInactive
       })}
@@ -18,7 +18,7 @@ const ConnectionsCard: FunctionComponent<CardProps> = ({ onClick, card, index, i
         <div className="memory-card-2">{card.word}</div>
       </div>
       <div className="card-face-2 card-back-face">
-        <div>{card.word}</div>
+        <div className="memory-card-2">{card.word}</div>
       </div>
     </div>
   );

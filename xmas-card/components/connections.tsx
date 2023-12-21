@@ -195,7 +195,7 @@ export default function Connections() {
         </div>
         </div>
         <div className="flex sm:flex-row flex-col justify-evenly items-center" style={{width: '100%'}}>
-            <div className="wrapper">
+            <div className="wrapper-connections">
                 {cards.map((card: any, index: any) => {
                 return (
                     <ConnectionsCard
@@ -211,7 +211,7 @@ export default function Connections() {
                 })}
             </div>
             <div className="flex flex-col">
-              <h2 className="mb-4 text-4xl font-extrabold text-gray-700 lg:text-4xl">Answers:</h2>
+              <h2 className="mb-4 text-4xl font-extrabold text-gray-700 text-2xl sm:text-4xl">Answers:</h2>
                 { group1Solved &&
                  <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>BRADS HOLIDAY PLANS:</strong> FOOTBALL, WOODWORKING, OVEREATING, LETHARGY</p>
                 }
