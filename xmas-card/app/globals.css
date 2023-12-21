@@ -104,6 +104,15 @@ body {
   margin: 10px;
 }
 
+.restart {
+  background-color: rgb(123, 56, 43);
+  margin: 0 20px;
+}
+
+.restart:hover {
+  background-color: rgb(180, 98, 82);
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .card {
@@ -190,5 +199,11 @@ body {
 
   .is-inactive {
     opacity: 0;
+  }
+
+  .answer {
+    background-color: rgb(160, 118, 139);
+    padding: 20px;
+    border-radius: 30px;
   }
 

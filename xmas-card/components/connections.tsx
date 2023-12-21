@@ -12,15 +12,15 @@ import ConnectionsCard from "./connectionsCard";
 const uniqueCardsArray = [
   {
     type: "category-two",
-    word: "word 1"
+    word: "word 2"
   },
   {
     type: "category-four",
-    word: "word 1"
+    word: "word 4"
   },
   {
     type: "category-three",
-    word: "word 1"
+    word: "word 3"
   },
   {
     type: "category-one",
@@ -28,15 +28,15 @@ const uniqueCardsArray = [
   },
   {
     type: "category-two",
-    word: "word 1"
+    word: "word 2"
   },
   {
     type: "category-four",
-    word: "word 1"
+    word: "word 4"
   },
   {
     type: "category-three",
-    word: "word 1"
+    word: "word 3"
   },
   {
     type: "category-one",
@@ -44,15 +44,15 @@ const uniqueCardsArray = [
   },
   {
     type: "category-two",
-    word: "word 1"
+    word: "word 2"
   },
   {
     type: "category-four",
-    word: "word 1"
+    word: "word 4"
   },
   {
     type: "category-three",
-    word: "word 1"
+    word: "word 3"
   },
   {
     type: "category-one",
@@ -60,15 +60,15 @@ const uniqueCardsArray = [
   },
   {
     type: "category-two",
-    word: "word 1"
+    word: "word 2"
   },
   {
     type: "category-four",
-    word: "word 1"
+    word: "word 4"
   },
   {
     type: "category-three",
-    word: "word 1"
+    word: "word 3"
   },
   {
     type: "category-one",
@@ -97,6 +97,10 @@ export default function Connections() {
   const [moves, setMoves] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const timeout = useRef<any>(null);
+  const [group1Solved, setGroup1] = useState(false);
+  const [group2Solved, setGroup2] = useState(false);
+  const [group3Solved, setGroup3] = useState(false);
+  const [group4Solved, setGroup4] = useState(false);
 
   const disable = () => {
     setShouldDisableAllCards(true);
@@ -117,6 +121,15 @@ export default function Connections() {
     if (cards[first].type === cards[second].type && cards[first].type === cards[third].type && cards[first].type === cards[fourth].type) {
       setClearedCards((prev: any) => ({ ...prev, [cards[first].type]: true }));
       setOpenCards([]);
+      if (cards[first].type === 'category-one') {
+        setGroup1(!group1Solved);
+      } else if (cards[first].type === 'category-two') {
+        setGroup2(!group2Solved);
+      } else if (cards[first].type === 'category-three') {
+        setGroup3(!group3Solved);
+      } else if (cards[first].type === 'category-four') {
+        setGroup4(!group4Solved);
+      }
       return;
     }
     // This is to flip the cards back after 500ms duration
@@ -162,45 +175,60 @@ export default function Connections() {
     setShowModal(false);
     setMoves(0);
     setShouldDisableAllCards(false);
+    setGroup1(false);
+    setGroup2(false);
+    setGroup3(false);
+    setGroup4(false);
     // set a shuffled deck of cards
     setCards(shuffleCards(uniqueCardsArray));
   };
 
   return (
-    <div className="App">
-      <header>
-        <h3>Play the Flip card game</h3>
-        <div>
-          Select two cards with same content consequtively to make them vanish
+    <div className="flex flex-col items-center">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Connections!</h1>
+        <div className="flex flex-row align-center mb-4 text-gray-700 lg:text-2xl">
+          Create four groups of four!
+          <div className="restart">
+            <Button style={{color: 'white'}} onClick={handleRestart}>
+                Restart
+            </Button>
         </div>
-      </header>
-      <div className="wrapper">
-        {cards.map((card: any, index: any) => {
-          return (
-            <ConnectionsCard
-              key={index}
-              card={card}
-              index={index}
-              isDisabled={shouldDisableAllCards}
-              isInactive={checkIsInactive(card)}
-              isFlipped={checkIsFlipped(index)}
-              onClick={handleCardClick}
-            />
-          );
-        })}
-      </div>
-      <footer>
-        <div className="score">
-          <div className="moves">
-            <span className="bold">Moves:</span> {moves}
-          </div>
         </div>
-        <div className="restart">
-          <Button onClick={handleRestart} color="primary" variant="contained">
-            Restart
-          </Button>
+        <div className="flex flex-row justify-evenly items-center" style={{width: '100%'}}>
+            <div className="wrapper">
+                {cards.map((card: any, index: any) => {
+                return (
+                    <ConnectionsCard
+                    key={index}
+                    card={card}
+                    index={index}
+                    isDisabled={shouldDisableAllCards}
+                    isInactive={checkIsInactive(card)}
+                    isFlipped={checkIsFlipped(index)}
+                    onClick={handleCardClick}
+                    />
+                );
+                })}
+            </div>
+            <div className="flex flex-col">
+              <h2 className="mb-4 text-4xl font-extrabold text-gray-700 lg:text-4xl">Answers:</h2>
+                { group1Solved &&
+                 <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 1: WORD, WORD, WORD, WORD</p>
+                }
+                {
+                    group2Solved &&
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 2: WORD, WORD, WORD, WORD</p>
+                }
+                {
+                    group3Solved &&
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 3: WORD, WORD, WORD, WORD</p>
+                }
+                {
+                    group4Solved &&
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 4: WORD, WORD, WORD, WORD</p>
+                }
+            </div>
         </div>
-      </footer>
       <Dialog
         open={showModal}
         disableEscapeKeyDown
