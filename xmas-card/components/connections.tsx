@@ -12,67 +12,67 @@ import ConnectionsCard from "./connectionsCard";
 const uniqueCardsArray = [
   {
     type: "category-two",
-    word: "word 2"
+    word: "BUC-EE'S"
   },
   {
     type: "category-four",
-    word: "word 4"
+    word: "SOPHIE"
   },
   {
     type: "category-three",
-    word: "word 3"
+    word: "POTTERY"
   },
   {
     type: "category-one",
-    word: "word 1"
+    word: "FOOTBALL"
   },
   {
     type: "category-two",
-    word: "word 2"
+    word: "COUNTRY MUSIC"
   },
   {
     type: "category-four",
-    word: "word 4"
+    word: "JACK"
   },
   {
     type: "category-three",
-    word: "word 3"
+    word: "IRELAND"
   },
   {
     type: "category-one",
-    word: "word 1"
+    word: "WOODWORKING"
   },
   {
     type: "category-two",
-    word: "word 2"
+    word: "DALLAS"
   },
   {
     type: "category-four",
-    word: "word 4"
+    word: "DIET COKE"
   },
   {
     type: "category-three",
-    word: "word 3"
+    word: "PHOTOGRAPHY"
   },
   {
     type: "category-one",
-    word: "word 1"
+    word: "OVEREATING"
   },
   {
     type: "category-two",
-    word: "word 2"
+    word: "EXTREME HEAT"
   },
   {
     type: "category-four",
-    word: "word 4"
+    word: "THE GRINCH"
   },
   {
     type: "category-three",
-    word: "word 3"
+    word: "CAMBRIDGE"
   },
   {
     type: "category-one",
-    word: "word 1"
+    word: "LETHARGY"
   }
 ];
 
@@ -213,19 +213,19 @@ export default function Connections() {
             <div className="flex flex-col">
               <h2 className="mb-4 text-4xl font-extrabold text-gray-700 lg:text-4xl">Answers:</h2>
                 { group1Solved &&
-                 <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 1: WORD, WORD, WORD, WORD</p>
+                 <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>BRAD'S HOLIDAY PLANS:</strong> FOOTBALL, WOODWORKING, OVEREATING, LETHARGY</p>
                 }
                 {
                     group2Solved &&
-                    <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 2: WORD, WORD, WORD, WORD</p>
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>JACK'S SUMMER EXPERIENCES:</strong> BUC-EE'S, COUNTRY MUSIC, DALLAS, EXTREME HEAT</p>
                 }
                 {
                     group3Solved &&
-                    <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 3: WORD, WORD, WORD, WORD</p>
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>SOPHIE'S 2024 PLANS:</strong> POTTERY, IRELAND, PHOTOGRAPHY, CAMBRIDGE</p>
                 }
                 {
                     group4Solved &&
-                    <p className="mb-4 text-gray-700 lg:text-2xl answer">GROUP 4: WORD, WORD, WORD, WORD</p>
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>THINGS MISSY LOVES MOST:</strong> SOPHIE, JACK, DIET COKE, THE GRINCH</p>
                 }
             </div>
         </div>
