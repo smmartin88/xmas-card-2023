@@ -194,7 +194,7 @@ export default function Connections() {
             </Button>
         </div>
         </div>
-        <div className="flex flex-row justify-evenly items-center" style={{width: '100%'}}>
+        <div className="flex sm:flex-row flex-col justify-evenly items-center" style={{width: '100%'}}>
             <div className="wrapper">
                 {cards.map((card: any, index: any) => {
                 return (
