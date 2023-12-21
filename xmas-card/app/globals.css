@@ -149,8 +149,8 @@ body {
   }
 
   .card-connections {
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
     transition: 0.3s;
     transform-style: preserve-3d;
@@ -179,13 +179,13 @@ body {
 
   .wrapper-connections {
     display: grid;
-    grid-template-columns: 60px 60px 60px 60px;
+    grid-template-columns: 80px 80px 80px 80px;
     justify-content: center;
   }
 
   .memory-card-2 {
     font-size: 6px;
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   .card-face {
