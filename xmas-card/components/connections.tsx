@@ -217,7 +217,7 @@ export default function Connections() {
                 }
                 {
                     group2Solved &&
-                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>JACKS SUMMER EXPERIENCES:</strong> BUC-EE'S, COUNTRY MUSIC, DALLAS, EXTREME HEAT</p>
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>JACKS SUMMER EXPERIENCES:</strong> BUC-EES, COUNTRY MUSIC, DALLAS, EXTREME HEAT</p>
                 }
                 {
                     group3Solved &&
