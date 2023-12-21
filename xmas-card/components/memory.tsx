@@ -127,13 +127,16 @@ export default function MemoryGame() {
   };
 
   return (
-    <div className="App">
-      <header>
-        <h3>Play the Flip card game</h3>
-        <div>
-          Select two cards with same content consequtively to make them vanish
+    <div className="flex flex-col items-center">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Memory Game</h1>
+        <div className="flex flex-row align-center mb-4 text-gray-700 lg:text-2xl">
+          Match each pair of pictures
+          <div>
+            <Button className="restart-conn" style={{color: 'white'}} onClick={handleRestart}>
+                Restart
+            </Button>
         </div>
-      </header>
+        </div>
       <div className="wrapper">
         {cards.map((card: any, index: any) => {
           return (
@@ -149,18 +152,6 @@ export default function MemoryGame() {
           );
         })}
       </div>
-      <footer>
-        <div className="score">
-          <div className="moves">
-            <span className="bold">Moves:</span> {moves}
-          </div>
-        </div>
-        <div className="restart">
-          <Button onClick={handleRestart} color="primary" variant="contained">
-            Restart
-          </Button>
-        </div>
-      </footer>
       <Dialog
         open={showModal}
         disableEscapeKeyDown
