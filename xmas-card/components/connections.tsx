@@ -213,15 +213,15 @@ export default function Connections() {
             <div className="flex flex-col">
               <h2 className="mb-4 text-4xl font-extrabold text-gray-700 lg:text-4xl">Answers:</h2>
                 { group1Solved &&
-                 <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>BRAD'S HOLIDAY PLANS:</strong> FOOTBALL, WOODWORKING, OVEREATING, LETHARGY</p>
+                 <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>BRADS HOLIDAY PLANS:</strong> FOOTBALL, WOODWORKING, OVEREATING, LETHARGY</p>
                 }
                 {
                     group2Solved &&
-                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>JACK'S SUMMER EXPERIENCES:</strong> BUC-EE'S, COUNTRY MUSIC, DALLAS, EXTREME HEAT</p>
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>JACKS SUMMER EXPERIENCES:</strong> BUC-EE'S, COUNTRY MUSIC, DALLAS, EXTREME HEAT</p>
                 }
                 {
                     group3Solved &&
-                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>SOPHIE'S 2024 PLANS:</strong> POTTERY, IRELAND, PHOTOGRAPHY, CAMBRIDGE</p>
+                    <p className="mb-4 text-gray-700 lg:text-2xl answer"><strong>SOPHIES 2024 PLANS:</strong> POTTERY, IRELAND, PHOTOGRAPHY, CAMBRIDGE</p>
                 }
                 {
                     group4Solved &&

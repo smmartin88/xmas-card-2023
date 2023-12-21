@@ -133,13 +133,11 @@ body {
   }
 
   .memory-card-2 {
-    background-color: rgb(0, 0, 0);
     height: 80px; 
     width: 80px;
   }
 
   .connection-2 {
-    background-color: rgb(91, 180, 133);
     height: 80px; 
     width: 80px;    
   }
