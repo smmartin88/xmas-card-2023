@@ -10,7 +10,6 @@ export default function PhotoGrid() {
         { src: 'assets/mom-dad.jpg', alt: 'Image 4' },
         { src: 'assets/mom-jack-lula.jpg', alt: 'Image 5' },
         { src: 'assets/soph.jpg', alt: 'Image 3' },
-        { src: 'assets/mom-lula.jpg', alt: 'Image 4' },
         { src: 'assets/soph-jack.JPG', alt: 'Image 5' },
         { src: 'assets/family-1.JPEG', alt: 'Image 1' },
         { src: 'assets/dallas.JPEG', alt: 'Image 2' },
@@ -21,7 +20,6 @@ export default function PhotoGrid() {
         { src: 'assets/mom-dad.jpg', alt: 'Image 4' },
         { src: 'assets/mom-jack-lula.jpg', alt: 'Image 5' },
         { src: 'assets/soph.jpg', alt: 'Image 3' },
-        { src: 'assets/mom-lula.jpg', alt: 'Image 4' },
         { src: 'assets/soph-jack.JPG', alt: 'Image 5' },
       ];      
 

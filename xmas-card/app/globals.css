@@ -126,9 +126,28 @@ body {
   width: 500px;
 }
 
+.rules {
+  background-color: white;
+  width: 40%;
+  padding: 2em;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  .rules {
+    background-color: white;
+    width: 100%;
+    padding: 2em;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
   .answer {
     background-color: rgb(160, 118, 139);
     padding: 10px;
