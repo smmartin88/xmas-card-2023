@@ -74,7 +74,7 @@ export default function Wordle() {
         ['gray', 'gray', 'gray', 'gray', 'gray', 'gray']
     ];
     const [cells, setCells] = useState(cellColors);
-    const answers = ['WORDLE', 'GRINCH', 'JINGLE', 'WINTER', 'TINSLE', 'BOUGHS', 'CANDLE', 'BAKING', 'FROSTY'];
+    const answers = ['WORDLE', 'GRINCH', 'JINGLE', 'WINTER', 'TINSLE', 'BOUGHS', 'CANDLE', 'BAKING', 'FROSTY', 'WREATH'];
     const [answer, setAnswer] = useState(answers[Math.floor(Math.random() * answers.length)]);
     const [gameOver, setGameOver] = useState(false);
 
@@ -218,10 +218,10 @@ export default function Wordle() {
             <p className="text-gray-600" style={{fontStyle: 'italic'}}>(If on phone, scroll down for rules)</p>
             <div className='flex sm:flex-row flex-col items-center justify-evenly' style={{width: '70%'}}>
                 <div className='flex flex-col items-center'>
-                    <div className="flex s:gap-3 gap-1 relative my-2">
+                <div className="flex sm:gap-3 gap-1 relative my-2">
                         {indices.map((index) => (
                             <input
-                                className={`s:text-4xl S:w-16 flex s:p-3 text-center s:h-20 text-white text-2xl w-12 h-16 p-1`}
+                                className={`sm:text-4xl sm:w-16 flex sm:p-3 text-center sm:h-20 text-white text-2xl w-12 h-16 p-1`}
                                 type="text"
                                 maxLength={1}
                                 onChange={(e) => handleInput(e, index, 0)}
@@ -235,10 +235,10 @@ export default function Wordle() {
                             />
                         ))}
                     </div>
-                    <div className="flex s:gap-3 gap-1 relative my-2">
+                    <div className="flex sm:gap-3 gap-1 relative my-2">
                         {indices.map((index) => (
                             <input
-                                className={`s:text-4xl S:w-16 flex s:p-3 text-center s:h-20 text-white text-2xl w-12 h-16 p-1`}
+                                className={`sm:text-4xl sm:w-16 flex sm:p-3 text-center sm:h-20 text-white text-2xl w-12 h-16 p-1`}
                                 type="text"
                                 maxLength={1}
                                 onChange={(e) => handleInput(e, index, 1)}
@@ -252,10 +252,10 @@ export default function Wordle() {
                             />
                         ))}
                     </div>
-                    <div className="flex s:gap-3 gap-1 relative my-2">
+                    <div className="flex sm:gap-3 gap-1 relative my-2">
                         {indices.map((index) => (
                             <input
-                                className={`s:text-4xl S:w-16 flex s:p-3 text-center s:h-20 text-white text-2xl w-12 h-16 p-1`}
+                                className={`sm:text-4xl sm:w-16 flex sm:p-3 text-center sm:h-20 text-white text-2xl w-12 h-16 p-1`}
                                 type="text"
                                 maxLength={1}
                                 onChange={(e) => handleInput(e, index, 2)}
@@ -269,10 +269,10 @@ export default function Wordle() {
                             />
                         ))}
                     </div>
-                    <div className="flex s:gap-3 gap-1 relative my-2">
+                    <div className="flex sm:gap-3 gap-1 relative my-2">
                         {indices.map((index) => (
                             <input
-                                className={`s:text-4xl S:w-16 flex s:p-3 text-center s:h-20 text-white text-2xl w-12 h-16 p-1`}
+                                className={`sm:text-4xl sm:w-16 flex sm:p-3 text-center sm:h-20 text-white text-2xl w-12 h-16 p-1`}
                                 type="text"
                                 maxLength={1}
                                 onChange={(e) => handleInput(e, index, 3)}
@@ -287,10 +287,10 @@ export default function Wordle() {
                             />
                         ))}
                     </div>
-                    <div className="flex s:gap-3 gap-1 relative my-2">
+                    <div className="flex sm:gap-3 gap-1 relative my-2">
                         {indices.map((index) => (
                             <input
-                                className={`s:text-4xl S:w-16 flex s:p-3 text-center s:h-20 text-white text-2xl w-12 h-16 p-1`}
+                                className={`sm:text-4xl sm:w-16 flex sm:p-3 text-center sm:h-20 text-white text-2xl w-12 h-16 p-1`}
                                 type="text"
                                 maxLength={1}
                                 onChange={(e) => handleInput(e, index, 4)}
@@ -305,10 +305,10 @@ export default function Wordle() {
                             />
                         ))}
                     </div>
-                    <div className="flex s:gap-3 gap-1 relative my-2">
+                    <div className="flex sm:gap-3 gap-1 relative my-2">
                         {indices.map((index) => (
                             <input
-                                className={`s:text-4xl S:w-16 flex s:p-3 text-center s:h-20 text-white text-2xl w-12 h-16 p-1`}
+                                className={`sm:text-4xl sm:w-16 flex sm:p-3 text-center sm:h-20 text-white text-2xl w-12 h-16 p-1`}
                                 type="text"
                                 maxLength={1}
                                 onChange={(e) => handleInput(e, index, 5)}
@@ -335,7 +335,7 @@ export default function Wordle() {
                     <p style={{margin: '10px 0'}}><span style={{backgroundColor: '#CDBA2E', padding: '10px', margin: '10px', color: 'white', fontWeight: 'bold'}}>A</span> The letter is in the word but in the wrong place</p>
                     <p style={{margin: '10px 0'}}><span style={{backgroundColor: 'green', padding: '10px', margin: '10px', color: 'white', fontWeight: 'bold'}}>A</span> The letter is in the correct place!</p>
                     <p style={{margin: '10px 0'}}>- There ARE plural words as options, but NO words have repeated letters</p>
-                    <p style={{margin: '10px 0'}}>- This is not attached to a dictionary, so any word is fair game. We have a list of random words so this can be played more than once!</p>
+                    <p style={{margin: '10px 0'}}>- This is not attached to a dictionary, so any word is fair game. We have a list of random words so this can be played more than once! (just navigate to a new tab and return to this one!)</p>
                 </div>
             </div>
         </div>

@@ -187,7 +187,7 @@ export default function Connections() {
     <div className="flex flex-col items-center">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Connections!</h1>
         <div className="flex flex-row align-center mb-4 text-gray-700 lg:text-2xl">
-          Create four groups of four!
+          Create four groups of four! You get unlimited tries :)
         </div>
         <div className="flex sm:flex-row flex-col justify-evenly items-center" style={{width: '100%'}}>
             <div className="wrapper-connections">
