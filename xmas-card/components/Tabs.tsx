@@ -62,7 +62,8 @@ export default function BasicTabs() {
             </Tabs>
       <CustomTabPanel value={value} index={0}>
         <div className='text-center'>
-            <h1 className="mb-4 text-4xl drop-shadow-[0_5px_5px_rgba(0,0,0,0.40)] font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Merry Christmas from the Martins! 🎅</h1>
+            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-700 md:text-5xl lg:text-6xl">Merry Christmas from the Martins! 🎅</h1>
+            <p className="text-2xl text-gray-500">Click on one of the tabs at the top of the page to play any one of the three games!</p>
             <PhotoGrid/>
             <div className="footer">
             </div>
